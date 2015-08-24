@@ -1,0 +1,1 @@
+default['sprout']['nginx']['plist_filename'] = "homebrew.mxcl.nginx.plist"
