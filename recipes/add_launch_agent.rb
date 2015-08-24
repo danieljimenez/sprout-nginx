@@ -7,7 +7,7 @@ directory launch_agents_path do
   owner node['sprout']['user']
 end
 
-plist_filename = node['sprout']['nginx']['plist_filename']
+plist_filename = 'homebrew.mxcl.nginx.plist'
 homebrew_root = '/usr/local'
 install_path = File.join(homebrew_root, 'opt', "nginx")
 source_plist_filename = File.join(install_path, plist_filename)
