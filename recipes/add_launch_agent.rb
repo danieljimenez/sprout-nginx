@@ -17,7 +17,8 @@ link launch_agent_plist_filename do
   to source_plist_filename
 end
 
-execute 'start the daemon' do
-  command "launchctl load -w #{launch_agent_plist_filename}"
-  user node['sprout']['user']
+service "nginx" do
+  action :enable
+  service_name "homebrew.mxcl.nginx"
+  provider Chef::Provider::Service::Macosx
 end
